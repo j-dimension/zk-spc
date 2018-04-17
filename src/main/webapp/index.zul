@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window apply="com.jdimension.zkspc.controller.SensorComposer">
+    <borderlayout height="1024px">
+        <north title="Sensor Data" maxsize="300" size="50%" splittable="false" collapsible="true">
+            <borderlayout>
+                <west border="none" size="25%" flex="true" maxsize="250" splittable="false" collapsible="false">
+                    <div >
+                        <label value="Upper Limit: "
+                                />
+                        <slider id="sliderUpper" mold="scale" width="150px" />
+                        <label value="Lower Limit: "
+                               />
+                        <slider id="sliderLower" mold="scale" width="150px" />
+                    </div>
+                </west>
+                <center border="none" flex="true">
+                    <div>
+                    <charts id="chart" type="spline" marginRight="10"
+                            title="Sensor Control Chart" width="1200" />
+                    <timer id="timer" delay="1000" running="true" repeats="true" />
+                    </div>
+                </center>
+            </borderlayout>
+        </north>
+        <center title="Exception History">
+            <borderlayout>
+                <center border="none">
+                    <listbox id="exceptions">
+
+                    </listbox>
+                </center>
+            </borderlayout>
+        </center>
+    </borderlayout>
+    
+</window>
